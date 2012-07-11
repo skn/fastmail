@@ -5,9 +5,9 @@
 # Then you can search for your users by name directly from mutt. Press ^t
 # after having typed parts of the name. Remember to edit configuration
 # variables below.
-# 
+#
 # Found at http://www.therandymon.com/files/fastmail-ldap, a modified version
-# of script at http://www.bsdconsulting.no/tools/mutt-ldap.pl. Modification 
+# of script at http://www.bsdconsulting.no/tools/mutt-ldap.pl. Modification
 # involved the search criteria so they are compatible with Fastmail's server
 #
 # 2005-02-24: Fixed for AD/Exchange 2003 & Unicode characters,
@@ -17,7 +17,7 @@
 # World Online Denmark. Worked for me with Exchange versions prior to Exchange
 # 2000.
 #
-# skn: 23-11-2011 
+# skn: 23-11-2011
 #   - Added ability to shown multiple email entries of a contact
 #   - Removed $domain var as it was not being used
 
@@ -58,7 +58,7 @@ print($mesg->count, " entries found\n");
 foreach my $entry ($mesg->all_entries) {
 	if ($entry->get_value($attrb)) {
     @emails = $entry->get_value($attrb);
-    foreach $email (@emails) {
+    foreach my $email (@emails) {
       print($email,"\t", decode("UTF-8", $entry->get_value('cn')),"\tFrom LDAP database\n");
     }
   }
