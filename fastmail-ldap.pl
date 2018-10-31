@@ -26,7 +26,7 @@ use Encode qw/encode decode/;
 use vars qw { $ldapserver $username $password $basedn $attrb @emails $email};
 
 # --- configuration ---
-$ldapserver = 'ldap.messagingengine.com';
+$ldapserver = 'ldaps://ldap.messagingengine.com';
 $username = 'cn=USERNAME@fastmail.fm,dc=User';
 $password = 'PASSWD';
 $basedn = 'dc=AddressBook';
